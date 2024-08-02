@@ -1,12 +1,12 @@
 server:
-  port: 8080
+  port: 8082
 spring:
   application:
-    name: hm-service
+    name: cart-service # 微服务名称
   profiles:
     active: dev
   datasource:
-    url: jdbc:mysql://${jh.db.host}:3307/hmall?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://${jh.db.host}:3307/hm-cart?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: ${jh.db.pw}
@@ -19,7 +19,7 @@ mybatis-plus:
       id-type: auto
 logging:
   level:
-    com.hmall: debug
+    com.jh: debug
   pattern:
     dateformat: HH:mm:ss:SSS
   file:
@@ -27,8 +27,8 @@ logging:
 knife4j:
   enable: true
   openapi:
-    title: 商城接口文档
-    description: "商城接口文档"
+    title: 商城购物车管理接口文档
+    description: "商城购物车管理接口文档"
     email: jh790074213@163.com
     concat: jh
     url: https://www.itcast.cn
@@ -38,17 +38,4 @@ knife4j:
         group-name: default
         api-rule: package
         api-rule-resources:
-          - com.hmall.controller
-hm:
-  jwt:
-    location: classpath:hmall.jks
-    alias: hmall
-    password: hmall123
-    tokenTTL: 30m
-  auth:
-    excludePaths:
-      - /search/**
-      - /users/login
-      - /items/**
-      - /hi
-# keytool -genkeypair -alias hmall -keyalg RSA -keypass hmall123 -keystore hmall.jks -storepass hmall123
+          - com.jh.cart.controller
