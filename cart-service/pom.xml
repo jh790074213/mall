@@ -21,7 +21,7 @@
         <!--common-->
         <dependency>
             <groupId>com.heima</groupId>
-            <artifactId>hm-common</artifactId>
+            <artifactId>mall-common</artifactId>
             <version>1.0.0</version>
         </dependency>
         <!--web-->
@@ -38,6 +38,20 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!--OK http 的依赖 -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.jh</groupId>
+            <artifactId>mall-api</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
     <build>

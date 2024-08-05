@@ -21,8 +21,8 @@ target/
 
 ./idea
 ./hm-common/target
-./hm-service/target
 ./logs/**
+./hm-service
 
 ### NetBeans ###
 /nbproject/private/
