@@ -19,10 +19,10 @@ target/
 *.iml
 *.ipr
 
-./idea
-./hm-common/target
-./logs/**
-./hm-service
+/idea
+/hm-common/target
+/logs/**
+/hm-service/**
 
 ### NetBeans ###
 /nbproject/private/
