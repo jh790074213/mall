@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cart-service # 微服务名称
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: 114.116.225.208:8848
+      config:
+        file-extension: yaml
+        shared-configs:
+          - data-id: jdbc-config.yaml
+          - data-id: log-config.yaml
+          - data-id: swagger-config.yaml
